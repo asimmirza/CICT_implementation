@@ -25,7 +25,8 @@ while True:
 
 if ip==2:
     while True:
-        print("You have choose : pipeline")
+
+        print("You have choose : pipeline ")
         print("1. Create new pipeline")
         print("2. Clone existing pipeline")
         print("3. Run Pipeline")

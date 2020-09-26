@@ -2,11 +2,13 @@
 
 import os
 import subprocess
+from package.pipeline import pipeline as pp
 
 os.system("clear")
 username = subprocess.check_output("whoami",shell=True)
 msg = "Hello " + username.decode("ascii")
-print("msg")
+print(msg)
+
 print("Welcome to CI-CT Application \n\n")
 ip =0
 while True:
@@ -17,8 +19,8 @@ while True:
     if ip==1 or ip==2:
         break
     else:
-        os.system("clear")
-        print("INVALID CHOICE \n")
+        # os.system("clear")
+        print(" \n INVALID CHOICE \n")
 
 
 if ip==2:
@@ -29,7 +31,8 @@ if ip==2:
         print("3. Run Pipeline")
         ip = int(input("Please Enter your choice:"))
         if ip==1 or ip==2 or ip==3:
+            pp.pipleine_choice(ip)
             break
         else:
-            os.system("clear")
-            print("INVALID CHOICE \n")
+            # os.system("clear")
+            print("\n INVALID CHOICE \n")

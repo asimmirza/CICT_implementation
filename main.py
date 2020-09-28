@@ -5,8 +5,8 @@ import subprocess
 from package.pipeline import pipeline as pp
 
 os.system("clear")
-username = subprocess.check_output("whoami",shell=True)
-msg = "Hello " + username.decode("ascii")
+username = pp.get_username()
+msg = "Hello " + username
 print(msg)
 
 print("Welcome to CI-CT Application \n\n")
